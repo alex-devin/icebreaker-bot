@@ -1,0 +1,34 @@
+display_information:
+  name: Versant Icebreaker Bot
+  description: Posts icebreakers, fun facts, and jokes to brighten your day
+  background_color: "#4A154B"
+
+features:
+  app_home:
+    home_tab_enabled: false
+    messages_tab_enabled: false
+  bot_user:
+    display_name: IcebreakerBot
+    always_online: true
+  slash_commands:
+    - command: /icebreaker
+      description: Get an icebreaker, fun fact, or joke
+      usage_hint: "[funfact|joketime|joke|setup|status|reset|help]"
+      should_escape: false
+
+oauth_config:
+  scopes:
+    bot:
+      - commands
+      - chat:write
+      - app_mentions:read
+
+settings:
+  event_subscriptions:
+    bot_events:
+      - app_mention
+  interactivity:
+    is_enabled: false
+  org_deploy_enabled: false
+  socket_mode_enabled: true
+  token_rotation_enabled: false
